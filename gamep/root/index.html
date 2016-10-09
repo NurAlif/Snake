@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="style/main.css" rel="stylesheet">
+<title>Pixe Art</title>
+</head>
+<body>
+
+    <h1 id="value"></h1>
+    <form class="opsi" style="margin-top: 100px;">
+    Warna : <br>
+    <div class="bun"><div class="point" id="rand" onclick="getkolor('rand')"></div> Random</div>
+    <div class="bun"><div class="point" id="red" onclick="getkolor('red')"></div> Merah</div>
+    <div class="bun"><div class="point" id="green" onclick="getkolor('green')"></div> Hijau</div>
+    <div class="bun"><div class="point" id="blue" onclick="getkolor('blue')"></div> Biru</div>
+    <div class="bun"><div class="point" id="purple" onclick="getkolor('purple')"></div> Ungu</div>
+    <div class="bun"><div class="point" id="orange" onclick="getkolor('orange')"></div> orange</div><br><br>
+    <div>Kecepatan : <input type="number" id="krono"><br><br></div>
+    Ukuran badan : <input type="number" id="size"><br>
+    
+</form>
+    <br><button onclick="startGame()" >START</button>
+    <canvas id="snake"></canvas>
+    
+    
+
+<script src="java/snake.js">
+</script>
+</body>
+</html>

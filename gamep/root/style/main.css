@@ -1,0 +1,33 @@
+canvas {
+    background-color: #ffffff;
+}
+.point{
+    background-color: #cccccc;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    float: left;
+    margin-right: 10px;
+}
+.point:hover{
+    background-color:#ff0000;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+}
+.bun{
+    padding-left: 40px;
+    float: left;
+}
+.opsi{
+    background-color: #f1f1f1;
+    border-color: #000000;
+    border-style: double;
+    border-width: 5px;
+    float: left;
+    padding: 20px;
+    margin-right: 10px;
+}
