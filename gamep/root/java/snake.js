@@ -2,9 +2,14 @@
  * Nur Alif Ilyasa 2016
  * 
  *
- * Snake     Ver. 1.0.0
+ * Snake     Ver. 1.1.0
  *
  * last Update : 11.22 , sunday, October 9, 2016
+ * 
+ * 
+ * CHANGELOG :
+ * 
+ * UPD 1.1.0 () BUG FIXED :  "BACK PATH"
  * 
  * 
  * repository  : https://github.com/NurAlif/Snake
@@ -123,7 +128,7 @@ var snake = {
     }
 };
 
-//obj bodi
+//________________________________obj bodi
 
 function bodi(width, height, color, x, y) {
     this.width = width;
@@ -132,6 +137,7 @@ function bodi(width, height, color, x, y) {
     this.x = x;
     this.y = y;    
     this.dirs;
+    this.dirdelta;
     this.dir;
     this.update = function(){
         ctx = snake.context;
@@ -150,6 +156,7 @@ function bodi(width, height, color, x, y) {
             case 3:
                 this.y += size;break;
         }
+        this.dirdelta = this.dir;
     };
 }
 
@@ -174,22 +181,30 @@ var keylisten= function(){
         switch(code){
             case 65:
                 if(snack[0].dir !== 2){
-                    snack[0].dir = 0;
+                    if(snack[0].dirdelta !== 2){
+                        snack[0].dir = 0;
+                    }
                 }
                 break;
             case 87:
                 if(snack[0].dir !== 3){
-                    snack[0].dir = 1;
+                    if(snack[0].dirdelta !== 3){
+                        snack[0].dir = 1;
+                    }
                 }
                 break;
             case 68:
                 if(snack[0].dir !== 0){
-                    snack[0].dir = 2;
+                    if(snack[0].dirdelta !== 0){
+                        snack[0].dir = 2;
+                    }
                 }
                 break;
             case 83:
                 if(snack[0].dir !== 1){
-                    snack[0].dir = 3;
+                    if(snack[0].dirdelta !== 1){
+                        snack[0].dir = 3;
+                    }
                 }
                 break;
         }
